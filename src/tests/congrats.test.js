@@ -6,19 +6,22 @@ import Congrats from '../components/Congrats';
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
+const defaultProps = { success: false };
+
 /**
   Factory function to create a shallowWrapper for the App component
   *@function testSetup 
   *@returns { ShallowWrapper }
 */
-const setupWrapper = (props={}) => { 
+const setupWrapper = (props={}) => {
+  const setupProps = { ...defaultProps, ...props } 
   return(
-    shallow(<Congrats {...props}/>) 
+    shallow(<Congrats {...setupProps}/>) 
   );
 }
 
 test('renders Congrats component', () => {
-   const wrapper = setupWrapper({ success: false });
+   const wrapper = setupWrapper();
    const congratsComponent = findByTestAttr(wrapper, 'congrats-component');
    expect(congratsComponent.length).toBe(1);
 });
