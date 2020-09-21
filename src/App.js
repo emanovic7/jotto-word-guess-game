@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      
+      <h1>GUESS WORD GAME</h1>
     </div>
   );
 }
