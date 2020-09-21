@@ -2,14 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const GuessWords = (props) => {
-  return (
-    <div >
+  let contents
+  if (props.guessedWords.length === 0){
+    contents = (
+      <span data-test='guess-instructions'>
+        Try to guess the secret word!!
+      </span>
+    );
+  }
 
+  return (
+    <div data-test="component-guesswords">
+      { contents }
     </div>
   );
 };
 
-GuessWords.PropTypes = {
+GuessWords.propTypes = {
   guessedWords: PropTypes.arrayOf(
     PropTypes.shape({
       guessedWord: PropTypes.string.isRequired,
