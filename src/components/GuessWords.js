@@ -19,9 +19,9 @@ const GuessWords = (props) => {
     contents = (
       <div data-test='guessed-words'>
         <h3>Guessed Words</h3>
-        <table>
-          <thead>
-            <tr><th>Guess</th><th>Matching Letters</th></tr>
+        <table className='table table-sm'>
+          <thead className='thead-light'>
+            <tr><th>Guessed Word</th><th>Matching Letters</th></tr>
           </thead>
           <tbody>
             { guessedWordsRows }

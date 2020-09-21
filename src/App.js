@@ -1,13 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>GUESS WORD GAME</h1>
-    </div>
-  );
+//components
+import Guesswords from './components/GuessWords';
+import Congrats from './components/Congrats';
+
+class App extends Component {
+  render(){
+    return (
+      <div className="container">
+        <h1>Jotto</h1>
+        <Congrats success={true} />
+        <Guesswords guessedWords={[ 
+          { guessedWord: 'train', letterMatchCount: 3 } 
+        ]}/>
+      </div>
+    );
+  }
 }
 
 export default App;
