@@ -29,7 +29,8 @@ describe('render', () => {
       const submitButton = findByTestAttr(wrapper, 'submit-button');
       expect(submitButton.length).toBe(1);
     });
-  })
+  });
+  
   describe('word has been guessed', () => {
     let wrapper;
     beforeEach(() => {
