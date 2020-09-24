@@ -5,7 +5,7 @@ import './App.css';
 //components
 import Guesswords from './components/GuessWords';
 import Congrats from './components/Congrats';
-import Input from './components/Input';
+import Input from './components/input';
 
 //actions
 import { getSecretWord } from './actions/index';
